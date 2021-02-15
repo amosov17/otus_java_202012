@@ -14,5 +14,5 @@ dependencyResolutionManagement {
 }
 
 rootProject.name = 'java_202012_hw'
-
 include 'hw01-gradle'
+includeBuild 'build-conventions'

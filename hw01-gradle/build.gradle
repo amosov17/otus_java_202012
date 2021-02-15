@@ -1,14 +1,8 @@
 plugins {
+    id 'java-config'
     id 'application'
     id 'com.github.johnrengelman.shadow' apply true
 }
-
-java {
-    toolchain {
-        languageVersion = JavaLanguageVersion.of("$javaVersion")
-    }
-}
-
 
 group = 'ru.otus.java'
 version = '1.0.0'
