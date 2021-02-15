@@ -3,13 +3,13 @@ pluginManagement {
         gradlePluginPortal()
     }
 }
-
+/*
 dependencyResolutionManagement {
     repositories {
         mavenCentral()
     }
 }
-
+*/
 rootProject.name = 'homeworks'
 includeBuild('../build-configurations')
 include 'hw01-gradle'
