@@ -1,7 +1,4 @@
 pluginManagement {
-    plugins {
-        id 'com.github.johnrengelman.shadow' version '6.1.0'
-    }
     repositories {
         gradlePluginPortal()
     }
@@ -13,5 +10,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = 'hw01-gradle'
-includeBuild('../build-conventions')
+rootProject.name = 'homeworks'
+includeBuild('../build-configurations')
+include 'hw01-gradle'

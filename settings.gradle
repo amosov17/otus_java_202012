@@ -1,4 +1,4 @@
 rootProject.name = 'java_202012_hw'
-includeBuild 'build-conventions'
-includeBuild 'hw01-gradle'
+includeBuild 'build-configurations'
+includeBuild 'homeworks'
 
