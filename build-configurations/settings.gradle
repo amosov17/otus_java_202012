@@ -4,6 +4,6 @@ pluginManagement {
     }
 }
 
-rootProject.name = 'build-conventions'
+rootProject.name = 'build-configurations'
 include 'java-config'
 include 'java-app-config'
