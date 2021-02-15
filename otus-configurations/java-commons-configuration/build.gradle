@@ -1,0 +1,4 @@
+//плагин для написания конфиг-плагинов на groovy
+plugins {
+    id('groovy-gradle-plugin')
+}

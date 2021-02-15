@@ -1,0 +1,17 @@
+pluginManagement {
+    repositories {
+        gradlePluginPortal()
+    }
+}
+
+/*
+dependencyResolutionManagement {
+    repositories {
+        gradlePluginPortal()
+    }
+}
+*/
+includeBuild('../otus-platforms')
+
+rootProject.name = 'otus-configurations'
+include('java-commons-configuration')

@@ -1,14 +1,24 @@
-rootProject.name = 'java_202012_hw'
-include 'hw01-gradle'
-
-dependencyResolutionManagement {
-    repositories {
-        mavenCentral()
+/*pluginManagement {
+    plugins {
+        id 'java'
+        id 'com.github.johnrengelman.shadow' version "${shadowPluginVersion}"
     }
 }
 
-//чтобы не плодить build.gradle'ы, перекрываем имя build-файла по умолчанию именем подпроекта
-//ВНИМАНИЕ ! так работает только на 1 уровне вложенности подпроектов
-rootProject.children.each { subproject ->
-    subproject.buildFileName = "${subproject.name}.gradle"
-}
+
+*/
+
+/*
+ *  делаем через composite, чтобы разделить configuration phase - будет гораздо быстрее работать в целом (при большом кол-ве проектов)
+ *  также, это поможет СИЛЬНО разгрузить build.gradle конкретных проектов ДЗ
+ */
+
+//здесь инфраструктурные сборки - платформы, конфигурации...
+includeBuild('otus-configurations')
+includeBuild('otus-platforms')
+
+//здесь непосредственно проекты ДЗ
+includeBuild('hw01-gradle')
+//includeBuild('hw02')
+//includeBuild('hw03')
+//...

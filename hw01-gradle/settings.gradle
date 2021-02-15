@@ -1,0 +1,16 @@
+pluginManagement {
+    repositories {
+        gradlePluginPortal()
+    }
+}
+
+dependencyResolutionManagement {
+    repositories {
+        mavenCentral()
+    }
+}
+
+rootProject.name = 'hw01-gradle'
+
+includeBuild('../otus-platforms')
+includeBuild('../otus-configurations')

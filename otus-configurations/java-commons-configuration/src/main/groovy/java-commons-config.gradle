@@ -1,0 +1,27 @@
+/*
+    собственно, сам конфигурационный plugin, который дает настройки всей java: версии компилятора, библиотека unit-тестов и т.д.
+    его будут использовать все проекты ДЗ
+ */
+
+plugins {
+    id('java')
+}
+
+group = 'ru.otus.config'
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(15)
+    }
+}
+
+dependencies {
+    testImplementation(platform('ru.otus.platform:test-platform'))
+    //берем JUnit 5
+    testImplementation('org.junit.jupiter:junit-jupiter-api')
+    testRuntimeOnly('org.junit.jupiter:junit-jupiter-engine')
+}
+//включаем тесты
+test {
+    useJUnitPlatform()
+}
