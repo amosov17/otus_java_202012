@@ -3,6 +3,12 @@ plugins {
     id 'com.github.johnrengelman.shadow' apply true
 }
 
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(15)
+    }
+}
+
 
 group = 'ru.otus.java'
 version = '1.0.0'
