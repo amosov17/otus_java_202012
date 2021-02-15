@@ -1,18 +1,4 @@
-pluginManagement {
-    plugins {
-        id 'com.github.johnrengelman.shadow' version '6.1.0'
-    }
-    repositories {
-        gradlePluginPortal()
-    }
-}
-
-dependencyResolutionManagement {
-    repositories {
-        mavenCentral()
-    }
-}
-
 rootProject.name = 'java_202012_hw'
-include 'hw01-gradle'
 includeBuild 'build-conventions'
+includeBuild 'hw01-gradle'
+

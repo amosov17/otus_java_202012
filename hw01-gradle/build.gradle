@@ -1,6 +1,5 @@
 plugins {
-    id 'java-config'
-    id 'application'
+    id 'java-app-config'
     id 'com.github.johnrengelman.shadow' apply true
 }
 
