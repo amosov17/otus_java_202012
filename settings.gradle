@@ -1,4 +1,5 @@
 rootProject.name = 'java_202012_hw'
 includeBuild 'build-configurations'
 includeBuild 'homeworks'
+includeBuild 'platforms'
 
