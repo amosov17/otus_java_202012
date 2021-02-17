@@ -1,0 +1,24 @@
+plugins {
+    id 'java'
+}
+/**
+ * plugin, который задает самые базовые общие для всех свойства: версия java, тесты и т.д.
+ */
+
+//здесь общая для всех java
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of("$javaVersion")
+    }
+}
+
+//здесь общие для всех зависимости (берем junit-bom)
+dependencies {
+    testImplementation(platform("org.junit:junit-bom:$junitVersion"))
+    testImplementation('org.junit.jupiter:junit-jupiter-api')
+    testRuntimeOnly('org.junit.jupiter:junit-jupiter-engine')
+}
+//включаем всем запуск тестов из Gradle
+test {
+    useJUnitPlatform()
+}

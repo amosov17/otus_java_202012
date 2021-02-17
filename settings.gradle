@@ -1,5 +1,14 @@
-rootProject.name = 'java_202012_hw'
-includeBuild 'build-configurations'
-includeBuild 'homeworks'
-includeBuild 'platforms'
+pluginManagement {
+    repositories {
+        gradlePluginPortal()
+    }
+}
 
+dependencyResolutionManagement {
+    repositories {
+        mavenCentral()
+    }
+}
+
+rootProject.name = 'java_202012_hw'
+include 'hw01-gradle'

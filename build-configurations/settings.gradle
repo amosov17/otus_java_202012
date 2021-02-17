@@ -1,9 +1,0 @@
-pluginManagement {
-    repositories {
-        gradlePluginPortal()
-    }
-}
-
-rootProject.name = 'build-configurations'
-include 'java-config'
-include 'java-app-config'
