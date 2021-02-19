@@ -1,0 +1,20 @@
+plugins {
+    id 'java-app-config'     //наш плагин, которы притащит все уже преднастроенное
+    id 'com.github.johnrengelman.shadow' version '6.1.0'   //плагин для uberJar - только для этого проекта
+}
+
+group = 'ru.otus.java'
+version = '1.0.0'
+
+//берем Guava-библиотеку
+dependencies {
+    implementation ("com.google.guava:guava:$guavaVersion") {
+        transitive = false  //чтобы не тянуть все ее зависимости - не нужны здесь
+    }
+}
+
+//делаем uberJar
+shadowJar {
+    mainClassName = 'ru.otus.hw01.HelloOtus'
+}
+

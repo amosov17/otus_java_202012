@@ -1,0 +1,8 @@
+// обшая задача, которая запускает тесты во всех УКАЗАННЫХ подпроектах
+task testAll  {
+    group = 'verification'
+    description = 'Run all tests in homeworks'
+    dependsOn(':hw01-gradle:test')
+    //...
+    //сюда добавлять остальные, которые нужно запускать в общем тестировании
+}

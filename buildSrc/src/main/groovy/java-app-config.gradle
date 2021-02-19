@@ -1,0 +1,8 @@
+plugins {
+    id 'java-config'
+    id 'application'
+}
+
+/**
+ *  plugin, для всех консольных приложений.  к базовому просто добавляется application
+ */
